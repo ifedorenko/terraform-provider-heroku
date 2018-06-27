@@ -143,6 +143,7 @@ func resourceHerokuAddonRead(d *schema.ResourceData, meta interface{}) error {
 		}
 	}
 
+	d.Set("id", addon.ID)
 	d.Set("name", addon.Name)
 	d.Set("app", addon.App.Name)
 	d.Set("plan", plan)
